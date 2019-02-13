@@ -16,6 +16,7 @@
     <file>src/</file>
     <exclude-pattern>src/Kernel.php</exclude-pattern>
     <exclude-pattern>src/Migrations/</exclude-pattern>
+    <exclude-pattern>config/bootstrap.php</exclude-pattern>
     <file>tests/</file>
 
 </ruleset>
