@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Performer;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -14,7 +15,7 @@ class PerformerType extends AbstractType
         $builder
             ->add('firstname')
             ->add('lastname')
-            ->add('birthday')
+            ->add('birthday', BirthdayType::class)
             ->add('description')
         ;
     }
