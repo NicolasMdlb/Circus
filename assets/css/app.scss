@@ -3,6 +3,28 @@
 body {
     background-color: white;
 }
+/* global */
+.body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+}
+
+.container {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+/* global */
 
 .navbar {
     background-color: firebrick;
@@ -12,4 +34,55 @@ body {
             color: black;
         }
     }
+    &.footer {
+        display: block;
+        text-align: center;
+    }
 }
+/* slider */
+.row-slide {
+    width: 100%;
+}
+.slide {
+    border: 3px solid black;
+    width: 100%;
+    &-mask {
+        position: relative;
+        overflow: hidden;
+        height: 60vh;
+    }
+    &-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        list-style-type: none;
+    }
+    &-choice {
+        height: 60vh;
+        font: 100 90px/135px;
+        font-size: 2em;
+        color: firebrick;
+        text-align: center;
+    }
+}
+
+.slide-nav {
+    text-align: center;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: firebrick;
+        cursor: pointer;
+        margin-left: .5em;
+    }
+    li.current {
+        background: rgb(144, 39, 39);
+    }
+}
+/* slider */
