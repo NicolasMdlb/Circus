@@ -14,15 +14,11 @@ body {
 .content {
     flex-grow: 1;
     display: flex;
+    flex-direction: column;
 }
 
-.container {
-    width: 100%;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
+h1 {
+    text-align: center;
 }
 /* global */
 
@@ -41,7 +37,6 @@ body {
 }
 /* slider */
 .slide {
-    border: 3px solid black;
     width: 100%;
     &-mask {
         position: relative;
@@ -50,16 +45,16 @@ body {
     }
     &-content {
         position: absolute;
-        top: 0;
         left: 0;
         width: 100%;
         list-style-type: none;
     }
     &-choice {
+        width: 100%;
         height: 60vh;
-        font: 100 90px/135px;
         font-size: 2em;
         color: firebrick;
+        align-items: center;
         text-align: center;
     }
 }
@@ -69,6 +64,7 @@ body {
     ul {
         margin: 0;
         padding: 0;
+        text-align: center;
     }
     li {
         display: inline-block;
