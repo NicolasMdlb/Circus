@@ -10,9 +10,7 @@
 <div class="body">
     {% block header %} {% include '_navbar.html.twig' %} {% endblock %}
     <div class="content">
-
-            {% block body %} {% endblock %}
-
+        {% block body %} {% endblock %}
     </div>
     {% block footer %} {% include '_footer.html.twig' %} {% endblock %}
     {% block javascripts %} {{ encore_entry_script_tags('app') }} {% endblock %}

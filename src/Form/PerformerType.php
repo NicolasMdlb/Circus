@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Performer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -16,6 +17,9 @@ class PerformerType extends AbstractType
             ->add('firstname')
             ->add('lastname')
             ->add('birthday', BirthdayType::class)
+            ->add('imageFile', FileType::class, [
+                'required' => false
+            ])
             ->add('description')
         ;
     }
